@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  plot_summary: MyString
+  img_url: MyString
+  run_time: 1
+
+two:
+  title: MyString
+  plot_summary: MyString
+  img_url: MyString
+  run_time: 1
