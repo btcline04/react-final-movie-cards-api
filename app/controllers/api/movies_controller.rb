@@ -1,5 +1,5 @@
 class Api::MoviesController < ApplicationController
-  before_action :set_movie, only: [:show, :destroy]
+  before_action :set_movie, only: [:show, :update, :destroy]
 
   def index
     render json: Movie.all
