@@ -1,16 +1,16 @@
 class Api::MoviesController < ApplicationController
-
   before_action :set_movie, only: [:show, :destroy]
+
   def index
     render json: Movie.all
   end
 
   def create
-    movie = Movie.new(movie_params)
-      if movie.save
-        render json: movie
+    @movie = Movie.new(movie_params)
+      if @movie.save
+        render json: @movie
       else
-        render json: { movie.errors }, status: 400
+        render json: @movie.errors, status: 400
       end
   end
 
@@ -22,7 +22,8 @@ class Api::MoviesController < ApplicationController
     if @movie.update(movie_params)
       render json: @movie
     else
-      render json: { movie.errors }, status: 400
+      render json: @movie.errors, status: 400
+    end
   end
 
   def destroy
